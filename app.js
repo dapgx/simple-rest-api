@@ -12,7 +12,7 @@ AWS.config.update({ region: process.env.AWS_REGION });
 const ssm = new AWS.SSM();
 
 async function getDatabaseCredentials() {
-  const parameterNames = ['/test/dbusername', '/test/dbpassword'];
+  const parameterNames = ['/your/ssm/parameter/store/db/username', '/your/ssm/parameter/store/db/password'];
   const ssmParameters = await ssm.getParameters({ Names: parameterNames }).promise();
   const credentials = {};
   ssmParameters.Parameters.forEach((param) => {
