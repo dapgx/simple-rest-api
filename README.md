@@ -44,7 +44,7 @@ The application exposes an endpoint at /dump_data that retrieves data from a MyS
 
 To access the data, make a GET request to http://localhost:3000/dump_data.
 
-## DATABASE
+## Database
 
 This SQL script will create a database named dump_data if it doesn't already exist and then create a table named dump_data with the specified columns.
 
