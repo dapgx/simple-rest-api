@@ -2,14 +2,6 @@
 
 This is a Node.js application built with Express.js that demonstrates how to integrate with the AWS SSM (Systems Manager Parameter Store) to retrieve database credentials and connect to a RDS database. The application also uses environment variables loaded from a `.env` file for configuration.
 
-## Prerequisites
-
-Before running the application, make sure you have the following installed:
-
-- Node.js: [Node.js Official Website](https://nodejs.org/)
-- npm (Node Package Manager): Installed with Node.js
-- AWS CLI (optional): [AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
-
 ## Getting Started
 
 > This Project is build and tested on Node.js 16.
