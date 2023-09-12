@@ -17,8 +17,7 @@ Before running the application, make sure you have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/dapgx/simple-rest-api.git
    ```
 
 2. Create a .env file in the root directory of the project and add the following environment variables with your values:
