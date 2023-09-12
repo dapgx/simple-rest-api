@@ -1,53 +1,57 @@
-# Express.js Application with AWS Parameter Store and RDS
+# Node.js Express App with AWS SSM Parameter Store Integration
 
-This is a sample Express.js application that demonstrates how to securely manage database credentials using AWS Parameter Store and connect to a Amazon RDS. It also uses environment variables for configuration.
+This is a Node.js application built with Express.js that demonstrates how to integrate with the AWS SSM (Systems Manager Parameter Store) to retrieve database credentials and connect to a RDS database. The application also uses environment variables loaded from a `.env` file for configuration.
 
-## Setup
+## Prerequisites
 
-> This project is built and tested on Node.js 16.
+Before running the application, make sure you have the following installed:
 
-1. **Clone the Repository:** Clone this repository to your local machine:
+- Node.js: [Node.js Official Website](https://nodejs.org/)
+- npm (Node Package Manager): Installed with Node.js
+- AWS CLI (optional): [AWS CLI Installation Guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
 
-```
-git clone https://github.com/dapgx/simple-rest-api.git
-```
+## Getting Started
 
-2. Install Dependencies: Install the project dependencies using npm:
+> This Project is build and tested on Node.js 16.
 
-```bash
-npm install
-```
+1. Clone this repository:
 
-3. Configuration
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
 
-Create a .env file in the project root directory with the following content, replacing placeholders with your actual values:
+2. Create a .env file in the root directory of the project and add the following environment variables with your values:
 
-```bash
-AWS_REGION=YOUR_AWS_REGION
-RDS_HOST=YOUR_RDS_HOST
-DB_NAME=YOUR_DB_NAME
-```
+   ```bash
+   AWS_REGION=your_aws_region
+   RDS_HOST=your_rds_host
+   DB_NAME=your_db_name
+   AWS_ACCESS_KEY_ID=your_access_key_id
+   AWS_SECRET_ACCESS_KEY=your_secret_access_key
+   AWS_SESSION_TOKEN=your_session_token
+   SSM_DB_USERNAME_PARAMETER=/your/ssm/parameter/store/db/username
+   SSM_DB_PASSWORD_PARAMETER=/your/ssm/parameter/store/db/password
+   ```
 
-Don't forget to update the app.js to point to the correct parameter store
+3. Install the required Node.js packages by running:
 
-4. Run the Application:
+   ```bash
+   npm install
+   ```
 
-Start the Express.js application:
-```bash
-node app.js start
-```
+4. Start the application:
 
-The application will be accessible at http://localhost:3000.
+   ```bash
+   node app.js
+   ```
+
+The application will start, and you can access it at http://localhost:3000.
 
 ## Usage
+The application exposes an endpoint at /dump_data that retrieves data from a MySQL database using the credentials obtained from the AWS SSM Parameter Store.
 
-Access the /dump_data route to retrieve data from the MySQL database. This demonstrates a secure way to fetch database credentials from AWS Parameter Store.
-
-Dependencies
-- Express.js
-- mysql2
-- AWS SDK for JavaScript
-- dotenv
+To access the data, make a GET request to http://localhost:3000/dump_data.
 
 ## DATABASE
 
@@ -75,6 +79,3 @@ VALUES
   ('jane.smith@example.com', 'Jane', 'Smith'),
   ('bob.johnson@example.com', 'Bob', 'Johnson');
 ```
-
-## About
-This application serves as a template for building Express.js applications with secure credential management using AWS Parameter Store. You can customize and extend it for your specific use cases.
