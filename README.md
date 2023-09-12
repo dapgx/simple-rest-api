@@ -1,4 +1,4 @@
-# Express.js Application with AWS Parameter Store and MySQL
+# Express.js Application with AWS Parameter Store and RDS
 
 This is a sample Express.js application that demonstrates how to securely manage database credentials using AWS Parameter Store and connect to a Amazon RDS. It also uses environment variables for configuration.
 
@@ -6,8 +6,7 @@ This is a sample Express.js application that demonstrates how to securely manage
 
 1. **Clone the Repository:** Clone this repository to your local machine:
 
-   git clone <repository-url>
-   cd express-aws-parameter-store-mysql
+   git clone https://github.com/dapgx/simple-rest-api.git
 
 2. Install Dependencies: Install the project dependencies using npm:
 
@@ -18,9 +17,11 @@ This is a sample Express.js application that demonstrates how to securely manage
 
 Create a .env file in the project root directory with the following content, replacing placeholders with your actual values:
 
+   ```bash
    AWS_REGION=YOUR_AWS_REGION
    RDS_HOST=YOUR_RDS_HOST
    DB_NAME=YOUR_DB_NAME
+   ```
 
 4. Run the Application:
 
