@@ -44,5 +44,5 @@ Dependencies
 - AWS SDK for JavaScript
 - dotenv
 
-About
+## About
 This application serves as a template for building Express.js applications with secure credential management using AWS Parameter Store. You can customize and extend it for your specific use cases.
