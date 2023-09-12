@@ -40,20 +40,20 @@ This is a Node.js application built with Express.js that demonstrates how to int
 The application will start, and you can access it at http://localhost:3000.
 
 ## Usage
-The application exposes an endpoint at /dump_data that retrieves data from a MySQL database using the credentials obtained from the AWS SSM Parameter Store.
+The application exposes an endpoint at /dump_data that retrieves data from a Amazon RDS database using the credentials obtained from the AWS SSM Parameter Store.
 
 To access the data, make a GET request to http://localhost:3000/dump_data.
 
 ## Database
 
-This SQL script will create a database named dump_data if it doesn't already exist and then create a table named dump_data with the specified columns.
+This SQL script will create a database named `dump_data` and then create a table named dump_data with the specified columns.
 
 ```
 CREATE DATABASE dump_data;
 
 USE dump_data;
 
-CREATE TABLE IF dump_data (
+CREATE TABLE dump_data (
   id INT AUTO_INCREMENT PRIMARY KEY,
   email VARCHAR(255) NOT NULL,
   first_name VARCHAR(255) NOT NULL,
