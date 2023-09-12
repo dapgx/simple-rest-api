@@ -6,29 +6,32 @@ This is a sample Express.js application that demonstrates how to securely manage
 
 1. **Clone the Repository:** Clone this repository to your local machine:
 
-   git clone https://github.com/dapgx/simple-rest-api.git
+```
+git clone https://github.com/dapgx/simple-rest-api.git
+```
 
 2. Install Dependencies: Install the project dependencies using npm:
 
-   ```bash
-   npm install
+```bash
+npm install
+```
 
 3. Configuration
 
 Create a .env file in the project root directory with the following content, replacing placeholders with your actual values:
 
-   ```bash
-   AWS_REGION=YOUR_AWS_REGION
-   RDS_HOST=YOUR_RDS_HOST
-   DB_NAME=YOUR_DB_NAME
-   ```
+```bash
+AWS_REGION=YOUR_AWS_REGION
+RDS_HOST=YOUR_RDS_HOST
+DB_NAME=YOUR_DB_NAME
+```
 
 4. Run the Application:
 
 Start the Express.js application:
-   ```bash
-   node app.js start
-   ```
+```bash
+node app.js start
+```
 
 The application will be accessible at http://localhost:3000.
 
