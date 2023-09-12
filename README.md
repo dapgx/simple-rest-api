@@ -4,6 +4,8 @@ This is a sample Express.js application that demonstrates how to securely manage
 
 ## Setup
 
+> This project is built and tested on Node.js 16.
+
 1. **Clone the Repository:** Clone this repository to your local machine:
 
 ```
@@ -25,6 +27,8 @@ AWS_REGION=YOUR_AWS_REGION
 RDS_HOST=YOUR_RDS_HOST
 DB_NAME=YOUR_DB_NAME
 ```
+
+Don't forget to update the app.js to point to the correct parameter store
 
 4. Run the Application:
 
