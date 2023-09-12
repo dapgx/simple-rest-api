@@ -7,12 +7,17 @@ dotenv.config();
 
 const app = express();
 
-AWS.config.update({ region: process.env.AWS_REGION });
+AWS.config.update({
+  region: process.env.AWS_REGION,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  sessionToken: process.env.AWS_SESSION_TOKEN,
+});
 
 const ssm = new AWS.SSM();
 
 async function getDatabaseCredentials() {
-  const parameterNames = ['/your/ssm/parameter/store/db/username', '/your/ssm/parameter/store/db/password'];
+  const parameterNames = [process.env.SSM_DB_USERNAME_PARAMETER, process.env.SSM_DB_PASSWORD_PARAMETER];
   const ssmParameters = await ssm.getParameters({ Names: parameterNames }).promise();
   const credentials = {};
   ssmParameters.Parameters.forEach((param) => {
