@@ -26,11 +26,13 @@ Create a .env file in the project root directory with the following content, rep
 4. Run the Application:
 
 Start the Express.js application:
-node app.js start
+   ```bash
+   node app.js start
+   ```
 
 The application will be accessible at http://localhost:3000.
 
-Usage
+## Usage
 Access the /dump_data route to retrieve data from the MySQL database. This demonstrates a secure way to fetch database credentials from AWS Parameter Store.
 
 Dependencies
